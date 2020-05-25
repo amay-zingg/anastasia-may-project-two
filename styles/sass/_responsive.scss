@@ -1,0 +1,125 @@
+@media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+        /* * * * HEADER * * * */
+        header{
+            height: 100%;
+        }
+
+        nav{
+            width: 100%;
+            margin: 5% 2%;
+            height: 100px;
+        }
+
+        nav ul{
+            background-color: rgba(250, 250, 250, 0.8);
+        }
+
+        nav ul li:hover{
+            background: $green;
+            border: none;
+
+            &:active{
+                background: $green;
+                border: none;
+            }
+        }
+
+        nav ul li a {
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        h1{
+            font-size: 50px;
+            margin: 5%;
+            text-align: right;
+            text-shadow: 1px 1px $green;
+        }
+
+        .header-photo{
+            display: none;
+        }
+
+        /* * * * MAIN * * * */
+
+        section.intro {
+            padding: 5%;
+        }
+
+        h3 {
+            font-size: 35px;
+            line-height: 40px;
+        }
+
+        section.intro p{
+            text-align: center;
+        }
+
+        section.links, section.site-info{
+            flex-flow: column;
+            padding: 5%;
+        }
+
+        .site-info-right{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .site-info-left, .site-info-right, .site-info-block, .site-info-block.left-block{
+            width: 100%;
+            padding: 5%;
+            text-align: center;
+        }
+
+        .site-info h4{
+            margin-top: 5%;
+        }
+
+        .site-info-block p{
+            text-align: center;
+        }
+
+        .information-block {
+            width: 100%;
+        }
+
+        section.full-banner{
+            display: none;
+        }
+
+        section.profile{
+            flex-flow: column;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .profile .img-block-container {
+            width: 100%;
+            padding: 5%;
+        }
+
+        .profile .img-block-container .bottom-corner-right {
+            position: relative;
+            width: 60%;
+            margin: 0 auto;
+            float: none;
+        }
+
+        .profile .info-block{
+            width: 90%;
+            padding: 5%;
+            text-align: center;
+        }
+
+        .gallery-container{
+            flex-flow: column wrap;
+        }
+
+        .gallery-container img {
+            padding: 0;
+        }
+}

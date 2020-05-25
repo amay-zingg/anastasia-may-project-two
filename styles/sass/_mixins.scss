@@ -1,0 +1,4 @@
+@mixin fontSize($chosenSize){
+    font-size: $chosenSize + 1;
+    line-height: ($chosenSize/10) * 1rem;
+}
