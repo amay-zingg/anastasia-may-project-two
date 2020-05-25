@@ -1,0 +1,89 @@
+$fontSize: 10px;
+
+// @include fontSize(30px);
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+p, .blog-aside-list li{
+    font-size: /* For Now */ 16px;
+}
+
+p a{
+    font-weight: bold;
+    font-style: italic;
+    
+    &:hover, :active{
+    text-decoration: underline;
+    }
+}
+
+h1, h2, h3, h4, .email, nav ul li a, button /* DRY */{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold italic;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h3, h4, nav ul li a, button /* DRY */{
+    letter-spacing: 1px;
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    margin: 10%;
+    width: 100%;
+    z-index: 20;
+}
+
+h2{
+    font-size: 80px;
+    line-height: 92px;
+    width: 100%;
+    text-align: center;
+}
+
+h3{
+    font-size: 42px;
+    line-height: 49px;
+}
+
+.intro h3{
+    margin-bottom: 5%;
+}
+
+.blog h3{
+    margin: 1em 0;
+}
+
+h3.blog-post-title{
+    margin: 9em 0 0 0;
+}
+
+h4{
+    font-size: 32px /*For Right Now*/ 20px;
+    margin: 0;
+}
+
+.email{
+    font-size: 26px;
+    letter-spacing: 1.1px;
+}
+
+nav ul li a{
+    font-size: 20px;
+    line-height: 29px;
+}
+
+button{
+    font-size: 20px;
+    text-align: center;
+    line-height: 32px;
+}
+
+
