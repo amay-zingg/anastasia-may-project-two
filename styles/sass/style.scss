@@ -134,6 +134,12 @@ nav ul li:hover{
     border-bottom: #FDFA69 15px solid;
 } 
 
+@-moz-document url-prefix() {
+    .header-photo{
+        top: 540px;
+    }
+}
+
 /* * * * THAT YELLOW PHOTO BORDER * * * */
 
 .bottom-corner-right img, .bottom-corner-left img{
