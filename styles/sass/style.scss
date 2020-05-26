@@ -47,7 +47,7 @@ section.intro, section.links, section.profile, main.blog-content, form, form fie
     background: $mint;
 }
 
-section.site-info, section.gallery{
+section.site-info, section.gallery, section.contact-form{
     background: $white;
 }
 
@@ -78,6 +78,9 @@ header, .contact-header{
 
 .contact-header{
     background: url(../assets/contact-header.jpg);
+    background-repeat: no-repeat;
+    background-color: $mint;
+    height: 75vh;
 }
 
 header, .blog-header{
@@ -416,7 +419,7 @@ article.blog-comments{
     width: 100%;
 }
 
-/* * * * FORMS * * * */
+/* * * * BLOG - FORM * * * */
 form, form fieldset{
     border: none;
 }
@@ -431,24 +434,22 @@ form fieldset{
     flex-flow: row wrap;
 }
 
-input[type="text"], input[type="email"], .reader-comment /* DRY */{
-    padding: 15px;
-}
-
 input[type="text"], input[type="email"]{
     width: 48%;
     border: none;
     border-bottom: $green solid 2px;
+    padding: 15px;
 }
 
-.reader-comment{
+.reader-comment, .contact-message{
     width: 98%;
     height: 200px;
     margin-top: 2%;
     border: $green solid 2px;
+    padding: 15px;
 }
 
-button.read-more, button.comment-submit {
+button.read-more, button.comment-submit, button.contact-submit {
     padding: 5px 15px;
     margin-top: 2%;
     background: lighten( $green, 10% );
@@ -467,8 +468,74 @@ button.read-more, button.comment-submit {
     }
 }
 
-button.comment-submit{
+button.comment-submit, button.contact-submit{
     width: 98%;
+}
+
+/* * * * CONTACT * * * */
+
+.contact-page{
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+section.contact-form{
+    width: 60%;
+}
+
+section.contact-form form, section.contact-form form fieldset{
+    background: $white;
+    padding: 3%;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], textarea.contact-message{
+    background: $white;
+    @include fontSize(18px);
+    padding: 2%;
+    margin: 3% 0;
+}
+
+aside.contact{
+    margin-top: 10%;
+}
+
+section.contact-form .bottom-corner-left{
+    top: -200px;
+}
+
+section.contact-form{
+    background: none;
+}
+
+.bottom-corner-left form{
+    z-index: 20;
+    position: relative;
+}
+
+aside.contact{
+    width: 30%;
+}
+
+p.contact span{
+    display: block;
+}
+
+nav.social-nav{
+    height: 30px;
+    width: 50%;
+}
+
+nav.social-nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.social-nav ul li{
+    width: calc(100% / 4);
+    text-align: left;
 }
 
 /* * * * FOOTER * * * */

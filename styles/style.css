@@ -298,8 +298,12 @@ h2 {
   line-height: 92px;
   width: 100%;
   text-align: center;
-  font-size: 81px;
+}
+
+.contact-header h2 {
+  font-size: 80px;
   line-height: 81px;
+  width: 73%;
 }
 
 h3 {
@@ -370,7 +374,7 @@ section.intro, section.links, section.profile, main.blog-content, form, form fie
   background: #EFFDF3;
 }
 
-section.site-info, section.gallery {
+section.site-info, section.gallery, section.contact-form {
   background: #FAFAFA;
 }
 
@@ -405,6 +409,9 @@ header, .contact-header {
 
 .contact-header {
   background: url(../assets/contact-header.jpg);
+  background-repeat: no-repeat;
+  background-color: #EFFDF3;
+  height: 75vh;
 }
 
 header, .blog-header {
@@ -793,7 +800,7 @@ article.blog-comments {
   width: 100%;
 }
 
-/* * * * FORMS * * * */
+/* * * * BLOG - FORM * * * */
 form, form fieldset {
   border: none;
 }
@@ -814,24 +821,22 @@ form fieldset {
           flex-flow: row wrap;
 }
 
-input[type="text"], input[type="email"], .reader-comment {
-  padding: 15px;
-}
-
 input[type="text"], input[type="email"] {
   width: 48%;
   border: none;
   border-bottom: #4CEEA7 solid 2px;
+  padding: 15px;
 }
 
-.reader-comment {
+.reader-comment, .contact-message {
   width: 98%;
   height: 200px;
   margin-top: 2%;
   border: #4CEEA7 solid 2px;
+  padding: 15px;
 }
 
-button.read-more, button.comment-submit {
+button.read-more, button.comment-submit, button.contact-submit {
   padding: 5px 15px;
   margin-top: 2%;
   background: #7bf2be;
@@ -841,19 +846,96 @@ button.read-more, button.comment-submit {
   transition: background 0.5s;
 }
 
-button.read-more:hover, button.comment-submit:hover {
+button.read-more:hover, button.comment-submit:hover, button.contact-submit:hover {
   background: #FDFA69 radial-gradient(circle, transparent 1%, #FDFA69 1%) center/15000%;
 }
 
-button.read-more:active, button.comment-submit:active {
+button.read-more:active, button.comment-submit:active, button.contact-submit:active {
   background-color: #FDFA69;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-button.comment-submit {
+button.comment-submit, button.contact-submit {
   width: 98%;
+}
+
+/* * * * CONTACT * * * */
+.contact-page {
+  width: 900px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+section.contact-form {
+  width: 60%;
+}
+
+section.contact-form form, section.contact-form form fieldset {
+  background: #FAFAFA;
+  padding: 3%;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], textarea.contact-message {
+  background: #FAFAFA;
+  font-size: 18px;
+  line-height: 19px;
+  padding: 2%;
+  margin: 3% 0;
+}
+
+aside.contact {
+  margin-top: 10%;
+}
+
+section.contact-form .bottom-corner-left {
+  top: -200px;
+}
+
+section.contact-form {
+  background: none;
+}
+
+.bottom-corner-left form {
+  z-index: 20;
+  position: relative;
+}
+
+aside.contact {
+  width: 30%;
+}
+
+p.contact span {
+  display: block;
+}
+
+nav.social-nav {
+  height: 30px;
+  width: 50%;
+}
+
+nav.social-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav.social-nav ul li {
+  width: calc(100% / 4);
+  text-align: left;
 }
 
 /* * * * FOOTER * * * */

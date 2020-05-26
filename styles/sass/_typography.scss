@@ -46,7 +46,11 @@ h2{
     line-height: 92px;
     width: 100%;
     text-align: center;
+}
+
+.contact-header h2{
     @include fontSize(80px);
+    width: 73%;
 }
 
 h3{
