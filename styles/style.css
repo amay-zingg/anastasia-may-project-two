@@ -337,6 +337,7 @@ button {
   line-height: 32px;
 }
 
+/* * * * DIDN'T FINISH ADDING FONTSIZE MIXIN OR GET A CHANCE TO GO THROUGH AND USE A FLEXBOX MIXIN LIKE DARSHANA SHOWED ME HOW TO USE. I RAN OUT OF TIME. DIDN'T MAKE VERY DRY AT ALL * * * */
 /* * * * SKIP LINK * * * */
 .sr-text {
   position: absolute;
