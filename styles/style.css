@@ -301,8 +301,8 @@ h2 {
 }
 
 .contact-header h2 {
-  font-size: 80px;
-  line-height: 81px;
+  font-size: 70px;
+  line-height: 71px;
   width: 73%;
 }
 
@@ -382,8 +382,6 @@ section.site-info, section.gallery, section.contact-form {
   margin-right: auto;
   margin-left: auto;
   max-width: 1200px;
-  padding-right: 10px;
-  padding-left: 10px;
 }
 
 /* * * * HEADER * * * */
@@ -411,7 +409,7 @@ header, .contact-header {
   background: url(../assets/contact-header.jpg);
   background-repeat: no-repeat;
   background-color: #EFFDF3;
-  height: 75vh;
+  height: 55vh;
 }
 
 header, .blog-header {
@@ -660,7 +658,6 @@ section.gallery {
 }
 
 section.gallery .gallery-container {
-  width: calc(100% / 3 - 5%);
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -669,11 +666,12 @@ section.gallery .gallery-container {
       justify-content: space-around;
 }
 
-section.gallery .gallery-container img {
+section.gallery .gallery-container figure {
   padding: 3%;
+  margin: 0;
 }
 
-section.gallery .gallery-container img:nth-child(2) {
+section.gallery .gallery-container figure:nth-child(2) {
   padding: 3% 0;
 }
 
@@ -863,7 +861,7 @@ button.comment-submit, button.contact-submit {
 
 /* * * * CONTACT * * * */
 .contact-page {
-  width: 900px;
+  width: 800px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -895,11 +893,12 @@ section.contact-form form, section.contact-form form fieldset {
 }
 
 aside.contact {
-  margin-top: 10%;
+  margin-top: 15%;
+  color: #2C2C2C;
 }
 
 section.contact-form .bottom-corner-left {
-  top: -200px;
+  top: -115px;
 }
 
 section.contact-form {
@@ -921,7 +920,7 @@ p.contact span {
 
 nav.social-nav {
   height: 30px;
-  width: 50%;
+  width: 70%;
 }
 
 nav.social-nav ul {
@@ -931,11 +930,22 @@ nav.social-nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: none;
 }
 
 nav.social-nav ul li {
   width: calc(100% / 4);
   text-align: left;
+}
+
+nav.social-nav ul li a {
+  color: #2C2C2C;
+}
+
+nav.social-nav ul li:hover, nav.social-nav ul li:active {
+  text-shadow: 1px 1px #4CEEA7;
+  border-bottom: none;
+  color: #FDFA69;
 }
 
 /* * * * FOOTER * * * */
@@ -1019,6 +1029,16 @@ footer p {
     font-size: 18px;
     line-height: 40px;
   }
+  nav.social-nav {
+    width: 80%;
+    margin: 0 auto;
+  }
+  nav.social-nav ul {
+    background-color: #EFFDF3;
+  }
+  nav.social-nav ul li {
+    text-align: center;
+  }
   main.blog-content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1049,16 +1069,50 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 70%;
   }
   section.gallery .gallery-container img {
     padding: 5% 0;
   }
+  .contact-header {
+    height: 400px;
+  }
+  .blog-header h2, .contact-header h2 {
+    font-size: 60px;
+    line-height: 61px;
+    width: 100%;
+    text-shadow: 1px 1px #4CEEA7;
+  }
+  .contact-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+  }
+  section.contact-form, aside.contact {
+    width: 90%;
+    margin: 0 auto;
+  }
+  section.contact-form .bottom-corner-left {
+    position: relative;
+    top: 0;
+  }
+  aside.contact {
+    text-align: center;
+  }
+  aside.contact {
+    margin-top: 0;
+    padding-top: 5%;
+  }
 }
 
 @media screen and (max-width: 630px) {
-  h1 {
-    font-size: 50px;
+  h1, .contact-header h2 {
+    font-size: 60px;
+    line-height: 61px;
+  }
+  h2 span {
+    display: block;
   }
   section.intro {
     padding: 5%;
@@ -1066,6 +1120,8 @@ footer p {
   h3 {
     font-size: 35px;
     line-height: 40px;
+    font-size: 35px;
+    line-height: 36px;
   }
   section.intro p {
     text-align: center;
@@ -1128,10 +1184,16 @@ footer p {
     padding: 5%;
     text-align: center;
   }
+  .blog-post-commenter {
+    width: 35%;
+  }
+  .blog-post-comment {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  header {
+  header, .blog-header {
     height: 100%;
   }
 }

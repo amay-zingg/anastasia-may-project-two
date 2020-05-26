@@ -56,8 +56,6 @@ section.site-info, section.gallery, section.contact-form{
     margin-right: auto;
     margin-left:  auto;
     max-width: 1200px;
-    padding-right: 10px;
-    padding-left:  10px;
 }
 
 /* * * * HEADER * * * */
@@ -80,7 +78,7 @@ header, .contact-header{
     background: url(../assets/contact-header.jpg);
     background-repeat: no-repeat;
     background-color: $mint;
-    height: 75vh;
+    height: 55vh;
 }
 
 header, .blog-header{
@@ -295,18 +293,17 @@ section.gallery{
 }
 
 section.gallery .gallery-container{
-    width: calc(100% / 3 - 5%);
-    // height: 300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
 }
 
-section.gallery .gallery-container img{
+section.gallery .gallery-container figure{
     padding: 3%;
+    margin: 0;
 }
 
-section.gallery .gallery-container img:nth-child(2){
+section.gallery .gallery-container figure:nth-child(2){
     padding: 3% 0;
 }
 
@@ -475,7 +472,7 @@ button.comment-submit, button.contact-submit{
 /* * * * CONTACT * * * */
 
 .contact-page{
-    width: 900px;
+    width: 800px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -499,11 +496,12 @@ section.contact-form form, section.contact-form form fieldset{
 }
 
 aside.contact{
-    margin-top: 10%;
+    margin-top: 15%;
+    color: $black;
 }
 
 section.contact-form .bottom-corner-left{
-    top: -200px;
+    top: -115px;
 }
 
 section.contact-form{
@@ -525,17 +523,28 @@ p.contact span{
 
 nav.social-nav{
     height: 30px;
-    width: 50%;
+    width: 70%;
 }
 
 nav.social-nav ul{
     display: flex;
     justify-content: space-between;
+    background-color: none;
 }
 
 nav.social-nav ul li{
     width: calc(100% / 4);
     text-align: left;
+}
+
+nav.social-nav ul li a{
+    color: $black;
+}
+
+nav.social-nav ul li:hover, nav.social-nav ul li:active {
+    text-shadow: 1px 1px $green;
+    border-bottom: none;
+    color: $yellow;
 }
 
 /* * * * FOOTER * * * */

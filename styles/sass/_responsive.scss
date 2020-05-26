@@ -54,12 +54,9 @@
             padding: 5%;
         }
 
-        // section.gallery .gallery-container{
-        //     height: 200px;
-        // }
-
     }
 
+    
 @media screen and (max-width: 800px){
 
     nav{
@@ -85,6 +82,19 @@
     nav ul li a {
         font-size: 18px;
         line-height: 40px;
+    }
+
+    nav.social-nav{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    nav.social-nav ul{
+        background-color: $mint;
+    }
+
+    nav.social-nav ul li{
+        text-align: center;
     }
 
     main.blog-content{
@@ -116,18 +126,56 @@
 
     section.gallery .gallery-container{
         flex-direction: column;
-        width: 70%;
     }
 
     section.gallery .gallery-container img {
         padding: 5% 0;
     }
+
+    .contact-header{
+        height: 400px;
+    }
+
+    .blog-header h2, .contact-header h2{
+        @include fontSize(60px);
+        width: 100%;
+        text-shadow: 1px 1px $green;
+    }
+
+    .contact-page{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    section.contact-form, aside.contact{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    section.contact-form .bottom-corner-left{
+        position: relative;
+        top: 0;
+    }
+
+    aside.contact{
+        text-align: center;
+    }
+
+    aside.contact{
+        margin-top: 0;
+        padding-top: 5%;
+    }
+
 }
 
 @media screen and (max-width: 630px){
         
-        h1{
-            font-size: 50px;
+        h1, .contact-header h2{
+            @include fontSize(60px);
+        }
+
+        h2 span{
+            display: block;
         }
 
         section.intro {
@@ -137,6 +185,7 @@
         h3 {
             font-size: 35px;
             line-height: 40px;
+            @include fontSize(35px);
         }
 
         section.intro p{
@@ -199,11 +248,18 @@
             text-align: center;
         }
 
+        .blog-post-commenter{
+            width: 35%
+        }
+
+        .blog-post-comment{
+            width: 60%;
+        }
 }
 
 @media screen and (max-width: 480px){
 
-        header{
+        header, .blog-header{
             height: 100%;
         }
         
