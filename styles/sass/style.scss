@@ -8,9 +8,49 @@ $black: #2C2C2C;
 $white: #FAFAFA; 
 $mint: #EFFDF3;
 
+/* * * * SKIP LINK * * * */
+
+.sr-text {
+    position: absolute;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow:hidden;
+    z-index:-999;
+}
+
+a.sr-text:focus, a.sr-text:active {
+    color: $white;
+    background-color: $yellow;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 5px;
+    border-radius: 15px;
+    border: 4px solid $green;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+}
+
+/* * * * BG * * * */
+
 body{
     background-color: $mint;
 }
+
+section.intro, section.links, section.profile, main.blog-content, form, form fieldset, input[type="text"], input[type="email"], .reader-comment{
+    background: $mint;
+}
+
+section.site-info, section.gallery{
+    background: $white;
+}
+
 
 .wrapper{
     margin-right: auto;
@@ -22,7 +62,7 @@ body{
 
 /* * * * HEADER * * * */
 
-header{
+header, .contact-header{
     background: url(../assets/header-image.jpg);
     height: 80vh;
     display: flex;
@@ -34,6 +74,10 @@ header{
     background: url(../assets/blog-header.jpg);
     height: 50vh;
     align-content: flex-start;
+}
+
+.contact-header{
+    background: url(../assets/contact-header.jpg);
 }
 
 header, .blog-header{
@@ -79,15 +123,15 @@ nav ul li:hover{
 
 .header-photo{
     position: absolute;
-    height: 462px;
-    width: 483px;
-    top: 230px;
     right: 0;
     z-index: 10;
+    height: 462px;
+    width: 483px;
+    top: 300px;
     border-top: #FDFA69 15px solid;
     border-left: #FDFA69 15px solid;
     border-bottom: #FDFA69 15px solid;
-}
+} 
 
 /* * * * THAT YELLOW PHOTO BORDER * * * */
 
@@ -98,17 +142,15 @@ nav ul li:hover{
 
 .bottom-corner-right, .bottom-corner-left{
     position: relative;
-
 }
 
-/* VERTICAL */
 .bottom-corner-right::after, .bottom-corner-left::after, .bottom-corner-right::before, .bottom-corner-left::before {
     content: '';
     position: absolute;
     background-color: $yellow;
 }
 
-/* * * * VERTICAL * * * */
+/* VERTICAL */
 .bottom-corner-right::after{
     width: 20%;
     height: 100%;
@@ -124,7 +166,7 @@ nav ul li:hover{
     right: -20px;
 }
 
-/* * * * VERTICAL * * * */
+/* VERTICAL */
 .bottom-corner-left::after{
     width: 20%;
     height: 100%;
@@ -140,7 +182,7 @@ nav ul li:hover{
     left: -20px;
 }
 
-/* * * * MAIN * * * */
+/* * * * MAIN STYLES * * * */
 
 section.intro{
     padding: 15%;
@@ -151,7 +193,7 @@ section.intro p{
     text-align: left;
 }
 
-/* * * * SITE INFO * * * */
+/* * * * SECTION - SITE INFO * * * */
 
 section.site-info{
     display: flex;
@@ -175,7 +217,7 @@ section.site-info{
     padding: 10% 0 0 15%;
 }
 
-/* * * * LINKS * * * */
+/* * * * SECTION - LINKS * * * */
 section.links{
     padding: 10% 5%;
     display: flex;
@@ -210,8 +252,7 @@ span.icon{
     padding-left: 3%;
 }
 
-
-/* * * * MAP BANNER * * * */
+/* * * * SECTION - MAP BANNER * * * */
 
 section.full-banner{
     display: flex;
@@ -219,7 +260,7 @@ section.full-banner{
     height: 100%;
 }
 
-/* * * * PROFILE * * * */
+/* * * * SECTION - PROFILE * * * */
 
 section.profile{
     padding: 8% 0;
@@ -243,26 +284,29 @@ section.profile{
     padding: 0 10% 0 0;
 }
 
-/* * * * GALLERY * * * */
+/* * * * SECTION - GALLERY * * * */
 
 section.gallery{
     padding: 5% 0;
+    display: flex;
 }
 
-.gallery-container{
-    width: 85%;
+section.gallery .gallery-container{
+    width: calc(100% / 3 - 5%);
+    // height: 300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
 }
 
-.gallery-container img{
+section.gallery .gallery-container img{
     padding: 3%;
 }
 
-.gallery-container img:nth-child(2){
+section.gallery .gallery-container img:nth-child(2){
     padding: 3% 0;
 }
+
 /* * * * BLOG PAGE * * * */
 main.blog-content{
     display: flex;
@@ -270,27 +314,34 @@ main.blog-content{
     flex-direction: row-reverse;
 }
 
-main.blog-content section{
+section.blog{
     width: 65%;
 }
 
-.blog-post-img{
-    margin-top: -8em;
-    float: right;
-    border-left: $yellow 15px solid;
-    border-bottom: $yellow 15px solid;
+article.blog-entry{
+    position: relative;
+    padding-top: 45%;
 }
 
-// .blog-post-img:before {
-//     content: "";
-//     display: block;
-//     border-left: $yellow 10px solid;
-//     border-bottom: $yellow 10px solid;
-// }
+.blog-photo{
+    height: 538px;
+    width: 767px;
+    top: -180px;
+    position: absolute;
+}  
+
+.blog-photo.bottom-corner-left::after{
+    bottom: -6px;
+}
+
+.blog-photo.bottom-corner-left::before{
+    bottom: -6px;
+}
+
 .blog-post{
     border-left: $yellow solid 2px;
     border-bottom: $yellow solid 2px;
-    padding: 30px;
+    padding: 5%;
 }
 
 .blog-post p{
@@ -299,7 +350,37 @@ main.blog-content section{
 
 p.blog-date{
     margin: 0 0 30px 0;
+    line-height: 20px;
 }
+
+/* * * * BLOG - COMMENTS * * * */
+
+.blog-comments-post{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.blog-post-commenter{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+figure.blog-post-commenter-img{
+    margin: 0;
+    padding: 0;
+}
+
+.blog-post-comment{
+    width: 80%;
+    padding-bottom: 5%;
+}
+
+.blog-post-comment p.date-and-user{
+    margin-top: 0;
+}
+
+/* * * * BLOG - ASIDE * * * */
 
 main.blog-content aside{
     width: 30%;
@@ -313,33 +394,30 @@ aside img{
 .blog-aside{
     background: $white;
     margin-top: -20px;
-    margin-left: 30%;
+    margin-left: 15%;
     padding: 5%;
+    width: 80%;
 }
 
 .blog-aside-list li{
-    padding: 10px;
+    padding: 1% 2%;
+    line-height: 20px;
 }
 
 .blog-aside-list li::before {
   content: "•"; 
   color: $green;
   display: inline-block; 
-  width: 1em;
-  margin-left: -1em
+  width: 5%;
+  margin-left: -2%;
 }
 
-/* * * * MAIN BG * * * */
-section.intro, section.links, section.profile, main.blog-content, form#commenter-post, form fieldset, input#name, input#email, .reader-comment{
-    background: $mint;
-}
-
-section.site-info, section.gallery{
-    background: $white;
+article.blog-comments{
+    width: 100%;
 }
 
 /* * * * FORMS * * * */
-form#commenter-post, form fieldset{
+form, form fieldset{
     border: none;
 }
 
@@ -350,14 +428,14 @@ form:focus-within{
 form fieldset{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
-input#name, input#email, .reader-comment /* DRY */{
+input[type="text"], input[type="email"], .reader-comment /* DRY */{
     padding: 15px;
 }
 
-input#name, input#email{
+input[type="text"], input[type="email"]{
     width: 48%;
     border: none;
     border-bottom: $green solid 2px;

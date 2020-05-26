@@ -19,33 +19,6 @@ html{
     box-sizing: inherit;
 }   
 
-.sr-text {
-    position: absolute;
-    left: -999px;
-    width: 1px;
-    height: 1px;
-    top: auto;
-    overflow:hidden;
-    z-index:-999;
-}
-
-// a.sr-text:focus, a.sr-text:active {
-//     color: $white;
-//     background-color: $yellow;
-//     left: auto;
-//     top: auto;
-//     width: 30%;
-//     height: auto;
-//     overflow: auto;
-//     margin: 10px 35%;
-//     padding: 5px;
-//     border-radius: 15px;
-//     border: 4px solid $green;
-//     text-align: center;
-//     font-size: 1.2em;
-//     z-index: 999;
-// }
-
 .visuallyhidden:not(:focus):not(:active) {
     position: absolute;
     width: 1px;
