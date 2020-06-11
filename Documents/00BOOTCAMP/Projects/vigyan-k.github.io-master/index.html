@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" href="./assets/geneFavicon.jpg" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/52404d4a70.js" crossorigin="anonymous"></script>
+    <title>Gene Maker</title>
+    <link rel="stylesheet" href="./styles/styles.css" type="text/css">
+</head>
+<body>
+    <header id="header">
+        <!-- * * * * ANA SUGGESTIONS - USE HEADER ELEMENT AS CONTAINER AND ONLY HAVE WRAPPER DIV INSIDE NOT BOTH IN SAME DIV -->
+        <div class="headerContainer wrapper">
+            <!-- * * * * ANA SUGGESTIONS - UNNECESSARY DIV AROUND H1, CAN STYLE IT EFFECTIVELY WITHOUT -->
+            <div>
+                <h1>Gene Hunter</h1>
+            </div>
+            <!-- * * * * ANA SUGGESTIONS - QUOTATIONS AROUND CLASS NAME MISSING, THIS IS WHY IT BREAKS OUT OF THE HEADER AROUND 470PX SCREEN SIZE I THINK -->
+            <div class=iconContainer>
+                <!-- * * * * ANA SUGGESTIONS - VISUALLY HIDDEN IN THE SETUP SNIPPET NOT USED, USE FOR FONT AWESOME ICONS LIKE THIS PLACED BESIDE <i> - <span class="visuallyhidden">[DESCRIPTION OF ICON]</span> - THIS TELLS SCREENREADER WHAT THE IMAGE/ICON IS OF -->
+                <i class=" icon fas fa-dna"></i>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <!-- * * * * ANA SUGGESTIONS - MAINCONTAINER COULD BE A SECTION -->
+        <div class="mainContainer wrapper">
+            <div class="mainTop boxes">
+                <h2>What is a Gene?</h2>
+                <div>
+                    <p>A gene is a sequence of coding in your DNA which encodes a gene product. They consist of building blocks called nucleotides: A, C, G, and T. These are the Sequences of life and make up who you are!</p>
+                    <!-- * * * * ANA SUGGESTIONS - ALT TEXT COULD BE MORE DESCRIPTIVE STILL NOT REALLY SURE WHAT PICTURES ARE OF, ALSO THEY COULD BE USED AS FIGURES IN YOUR USE AND THE ALT TEXT COULD ALSO BE A FIGCAPTION FOR THE USER TO READ AND UNDERSTAND WHAT IMAGE IS OF, LIKE IN A TEXT BOOK, YA KNOW? -->
+                    <img src="./assets/mainOne.jpg" alt="DNA Bases">
+                    <img src="./assets/mainTwo.jpg" alt="DNA and RNA Basesx">
+                </div>
+                <!-- * * * * ANA SUGGESTIONS - I KNOW YOU TARGETED THESE BUTTONS IN YOUR CSS/JS BUT THEY COULD ALSO HAVE CLASS NAMES TO IDENTIFY ALSO TYPE="SUBMIT" -->
+                <button>Create your Random Gene!</button>
+            </div>
+            <!-- * * * * ANA SUGGESTIONS - THIS IS THE DYNAMICALLY FILLED BOX? COULD HAVE A BETTER NAME, LIKE "DNARETURN" OR SOMETHING LIKE THAT-->
+            <div class="mainBot" id="mainBot"></div>
+        </div>
+        
+    </main>
+    <aside>
+        <div class="asideContainer wrapper">
+            <div class="asideTop boxes">
+                <h2>Complementary Sequence</h2>
+                <p>Your gene sequences naturally run anti-parallel to one another. For every nucleotide base in your DNA, it is attached to an opposite pair. The opposite pairs flow the other way. </p>
+                <button>Reverse your Gene!</button>
+            </div>
+            <div class="asideBot" id="asideBot"></div>
+        </div>
+    </aside>
+
+    <!-- * * * * ANA SUGGESTIONS - I DON'T UNDERSTAND WHY YOU PUT THIS IN A FOOTER AND DIDN'T MAKE IT A SECTION? FOOTERS ARE USED TO CONTAIN AN AUTHOR/COPYRIGHT/CONTACT INFO -->
+    <footer>
+        <div class="footerContainer wrapper">
+            <div class="footerLeft">
+                <h2>Motifs</h2>
+                <p>Motifs are short recurring patterns in DNA which have biological functions. When DNA gets copied, there are specified sites machinery binds to. </p>
+                <!-- * * * * ANA SUGGESTIONS - THE STARTING DASH IS UNNECESSARY ON THIS PARAGRAPH -->
+                <p> - Let's see if there are any Motifs in <span class="nameOfGene">your personal Gene!</span></p>
+                <img src="./assets/footerOne.png" alt="DNA transcription">
+            </div>
+            <div class="footerRight">
+                <!-- * * * * ANA SUGGESTIONS - WRONG USE OF H3'S COULD USE AN OL FOR THE NUMBERS EFFECT AND STYLE IT -->
+                <h3>1. "TATA" Boxes</h3>
+                <h3>2. "CGCG" Islands</h3>
+                <h3>3. "TAACGCG" Combination</h3>
+                <button>Search for these Motifs in your Sequence</button>
+            </div>
+        </div>
+        <!-- * * * * ANA SUGGESTIONS - AS A USER IT'S NOT CLEAR TO ME WHAT THESE NUMBERS MEAN WHEN THEY ARE PRODUCED, WHY IS IT SIGNIFICANT THAT TATA IS AT 92 712? ECT -->
+        <div class="motifsFound wrapper" id="motifsFound">
+            <div class="foundOne"></div>
+            <div class="foundTwo"></div>
+        </div>
+        <div class="reset">
+            <!-- * * * * ANA SUGGESTIONS - WC3 VALIDATOR SAID THE BUTTON IN AN <A> IS WRONG, ALSO VISUALLY HIDDEN NOT USED ON ICON, ALSO BUTTON TYPE="RESET" COULD BE USED HERE AND onClick="window.location.reload()" AND TARGET IN JS FILE WITH 
+                $("input[type=reset]").on("click", function () {
+                window.location.reload()
+                });
+            -->
+            <a href="index.html#header"><button><i class=" redo fas fa-redo-alt"></i> Try Another Gene</button></a>
+        </div>
+    </footer>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src='./scripts/script.js'></script>
+</body>
+</html>

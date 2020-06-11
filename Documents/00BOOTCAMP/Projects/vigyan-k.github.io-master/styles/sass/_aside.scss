@@ -1,0 +1,14 @@
+.asideContainer{
+    display:flex;
+    flex-direction: column;
+    margin-top:20px;
+}
+
+.asideBot{
+    background-color: $accent;
+    border-radius: 50px 15px;
+    text-align: center;
+    margin-top:20px;
+}
+
+// * * * * THE MAINTOP HAS A DIV INSIDE WITH 20PX PADDING AND THIS ONE DOESN'T SO THE P IS TOUCHING THE H2

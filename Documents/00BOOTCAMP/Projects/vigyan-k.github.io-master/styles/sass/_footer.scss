@@ -1,0 +1,40 @@
+.footerContainer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.footerLeft,
+.footerRight{
+    background-color: $primary;
+    padding:50px;
+    border-radius: 50px;
+    margin: 20px 10px;
+    width:50%;
+    h2,
+    h3{
+        margin:0 0 25px 0;
+    }
+    p{
+        line-height: 40px;
+    }
+    button{
+       margin-top:15px;
+    }
+    img{
+        margin-top:10px;
+    }
+}
+
+footer>div:nth-child(2){
+    background-color:$accent;
+    border-radius: 50px 15px;
+}
+
+.motifsFound{
+    margin:10px auto;
+}
+
+footer>div:nth-child(3){
+    text-align: center;
+    margin: 10px;
+}

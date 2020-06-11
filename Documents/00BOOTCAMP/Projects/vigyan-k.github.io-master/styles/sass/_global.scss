@@ -1,0 +1,119 @@
+@import'variables';
+
+html {
+    font-family: "open sans", "lato", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $base;
+}
+
+// * * * * THIS USE OF WRAPPER COULD USE THE MAX-WIDTH AND PADDING INSTEAD OF THE % WIDTH AND MARGIN CENTERING LIKE .WRAPPER{MAX-WIDTH:1350PX; PADDING: 0 5%;}
+.wrapper {
+    max-width: 1350px;
+    width: 90%;
+    margin: 0 auto;
+}
+  
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+p{
+    color:#FBFAF9;
+}
+
+h1,
+h2,
+h3{
+    // * * * * SHOULDN'T THIS HAVE A BACKUP FONT LIKE SANS-SERIF
+    font-family: 'comfortaa';
+}
+
+h1{
+    // * * * * TO SOLVE YOUR ISSUE WITH FONT SIZING IN MEDIA QUERIES YOU SHOULD USE CLAMP TO TARGET THE FONT SIZE LIKE font-size: clamp(1rem, 2.5vw, 2rem); TO HAVE A MINIMUM SIZE-MED-MAXIMUM SIZE
+    font-size:5rem;
+}
+
+h2{
+    font-size:3.5rem;
+}
+
+h3{
+    font-size:3rem;
+}
+
+p{
+    font-size: 1.8rem;
+}
+
+.icon{
+    font-size: 8rem;
+    color: $accent;
+}
+
+button{
+    border:2px solid transparent;
+    color:white;
+    padding: 15px 15px;
+    border-radius:20px;
+    background-color: $accentTwo;
+    font-size:1.5rem;
+    transition: ease 400ms;
+}
+
+button:hover,
+button:focus{
+    border: 2px solid #fff;
+    background-color:$accent;
+    color: #000;
+}
+
+// * * * * THIS STYLE NOT HAVING A ROUNDED BORDER LIKE YOUR BUTTON LOOKS WEIRD TO ME, MAYBE DO A BOX SHADOW INSTEAD?
+button:focus{
+    border: 2px dashed $accentTwo;
+}
+
+.reset i{
+    transition: ease 400ms;
+}
+
+.reset:hover i,
+.reset:focus i{
+    rotate: 180deg;
+}
+
+.mainBot,
+.asideBot,
+.motifsFound{
+    line-height: 40px;
+    transition: ease 500ms;
+    word-break: break-all; 
+    word-wrap: break-word;
+}
+
+.boxes{
+    background-color: $primary;
+    padding:50px;
+    border-radius: 50px;
+    // margin-bottom: 20px;
+    // * * * * ^ THAT SHOULD'VE BEEN REMOVED FROM YOUR LIVE CODE
+    h3{
+        margin:0 0 25px 0;
+    }
+
+    p{
+        // * * * * THIS P TOUCHES THE IMG WHEN RESIZING BECAUSE THERE IS NO PADDING
+        line-height: 40px;
+    }
+    button{
+       margin-top:15px;
+    }
+}
+
+img{
+    border-radius:20px;
+    box-shadow:5px 5px $accentTwo;
+}
